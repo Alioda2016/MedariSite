@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>الرئيسية</title>
+{% endblock %}
+
+
+{% block content %}
+<main class="container">
+
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary" id="first-section">
+        <div class="col-lg-6 px-0">
+            <h1 class="display-4 fst-italic">{{ latest_articles.0.title }}</h1>
+            <div class="mb-1 text-body-secondary">{{ latest_articles.0.date_added }}</div>
+            <p class="lead my-3">{{ latest_articles.0.content }}</p>
+            <p class="lead mb-0"><a href="{{ latest_articles.0.pdf_file.url }}" class="text-body-emphasis fw-bold"
+                                    target="_blank">أكمل
+                القراءة...</a></p>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">{{latest_articles.1.title}}</h3>
+                    <div class="mb-1 text-body-secondary">{{latest_articles.1.date_added}}</div>
+                    <p class="card-text mb-auto">{{latest_articles.1.content}}</p>
+                    <a href="{{ latest_articles.1.pdf_file.url }}" target="_blank"
+                       class="icon-link gap-1 icon-link-hover stretched-link">
+                        أكمل القراءة
+                        <svg class="bi">
+                            <use xlink:href="#chevron-right"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <!-- Replace the SVG with an actual image using the img tag -->
+                    <img src="{{latest_articles.1.picture.url}}" alt="صورة مصغرة" width="200" height="250"
+                         class="bd-placeholder-img">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">{{latest_articles.2.title}}</h3>
+                    <div class="mb-1 text-body-secondary">{{latest_articles.2.date_added}}</div>
+                    <p class="mb-auto">{{latest_articles.2.content}}</p>
+                    <a href="{{ latest_articles.2.pdf_file.url }}" target="_blank"
+                       class="icon-link gap-1 icon-link-hover stretched-link">
+                        أكمل القراءة
+                        <svg class="bi">
+                            <use xlink:href="#chevron-right"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <!-- Replace the SVG with an actual image using the img tag -->
+                    <img src="{{latest_articles.2.picture.url}}" alt="صورة مصغرة" width="200" height="250"
+                         class="bd-placeholder-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-5">
+        <div class="col-md-8">
+            <article class="blog-post">
+                <h4 class="fst-italic">مركز مداري وهج جديد يحلق في سماء الوطن.</h4>
+                <p class="blog-post-meta">20 مارس 2019 بقلم <a href="https://twitter.com/HusseinAlabeedi"
+                                                               target="_blank">مهندس / حسين بن سعد العبيدي</a></p>
+
+                <p>قد كان حلم صغير يدور في مخيلاتنا وقد يأتي في أفكارنا ثم يختفي ثم يعود ليسحب في مآزرنا ليذكرنا من
+                    جديد حتى كانت الرحلة إلى ارض الكنانة وبلاد المعرفة مصر الحبيبة حتى اشتد بنا الحماس للخروج بذلك الحلم
+                    إلى النور.
+                    وهانا نحن نلمس تلك الحقيقة ونؤسس لوهج معرفي وطموح اسمه مركز مداري للدراسات والأبحاث الاستراتيجية
+                    بالجمهورية اليمنية يهدف إلى خلق حوار معرفي من البحث والدراسة للوصول إلى تلك الحقيقة المجردة.
+                </p>
+                <hr>
+                <blockquote class="blockquote">
+                    <p>تعكـس رؤيتنـا مسـار المركز, وتعد موجهـا أساسـيا يف كل جوانـب بحثنـا مـن
+                        خـال تحديد مـا يحتـاج إليـه صانـع القـرار لتحقيـق التنميـة المستدامة والمنشودة.</p>
+                </blockquote>
+                <p>وكوادرنا هي خليط من النخب آلإعلامية والثقافية من أبناء مأرب وبقية أركان الوطن الحبيب لنقضي على أحاسيس
+                    التشدد السياسي والحزبي والعقائدي ونجعلها حقيقة واضحة جلية هي الأيمان والمعرفة والحجة ولا شيء غيرها.
+                    بالمعلومة والبيانات الصحيحة وبالحوار المتفتح نتحاجج ونتناقش حتى نصل إلى صُلْب الحقيقة فنتبعها
+                    ونطورها
+                    حنى نبنى خيمة مضيئة تعجز الرياح والعواصف العاتية عن إزاحتها حتى نبني الخيمة جنب الخيمة فنحول تلك
+                    الأفكار إلى مجمع سكاني كبير متألف يعيش في وئام مع نفسه ومع الأجرين وذلك هو مشروع مركز مداري للدراسات
+                    والأبحاث وتلك الخيمات المضيئة هو ذلك التجمع الإنساني, الذي يعيش في سلام.
+                </p>
+            </article>
+
+
+            <nav class="blog-pagination" aria-label="Pagination">
+                <a class="btn btn-outline-primary rounded-pill" aria-disabled="true" href="{% url 'article_list' %}">تدوينات أخرى</a>
+            </nav>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">رئيس مركز مداري للدراسات والأبحاث الاستراتيجية</h4>
+                    <p class="mb-0">أما آن لهذه الحرب العبثية ان تتوقف في وطننا وآن لقوى التقدم والمعرفة للحلول مكان
+                        القِوَى الفاسدة التي تدوس رقاب الشرفاء والمبدعين وآن لشرذمة التهميش والإقصاء والتمسك بالرأي
+                        الاحادي إلى الانسحاب من الكراسي والصفوف الأمامية وترك تلك ألاماكن لجيل جديد من شباب هذه الأمة
+                        للانطلاق نحو آفاق المستقبل الموعود بالسلام والرخاء، وإذا لم نفكر بهذا التفكير فلا بديل لنا إلا
+                        مواصلة الحروب والقتل والعيش الدائم في اتون الجهل والظلام.</p>
+                </div>
+
+                <div>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                               href="https://twitter.com/HusseinAlabeedi" target="_blank">
+                                <img src="{% static 'img/hussain_picture.jpeg' %}" alt="Image Description"
+                                     width="revert"
+                                     height="120">
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">مهندس / حسين بن سعد العبيدي</h6>
+                                    <small class="text-body-secondary">رئيس مركز مداري للدراسات والأبحاث
+                                        الاستراتيجية</small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="p-4">
+                    <h4 class="fst-italic">في مكان آخر</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="https://twitter.com/HusseinAlabeedi" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.facebook.com/medarycenter.org" target="_blank">Facebook</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+
+
